@@ -1,5 +1,12 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+h1= "search something"
+form(name="query", method="get", action="/api/")
+    div.input
+        | keyword
+        br
+        input(type="text", name="query", placeholder="query here")
+        br
+        | offset
+        br
+        input(type="text" name="offst", placeholder="enter a number")
+    div.actions
+        input(type="submit", value="search")
